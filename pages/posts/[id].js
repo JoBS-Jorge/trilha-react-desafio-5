@@ -19,10 +19,9 @@ const components = {
   Head,
 };
 
-export default function PostPage({
-  posts,
-  globalData,
-}) {
+export default function PostPage({ posts, globalData }) {
+
+  console.log(posts)
   return (
     <Layout>
       <SEO
@@ -67,7 +66,7 @@ export const getServerSideProps = async ({ params }) => {
     props: {
       globalData,
       posts,
-    },
+    }
   };
 };
 
